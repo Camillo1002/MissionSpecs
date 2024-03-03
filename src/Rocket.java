@@ -10,7 +10,8 @@ public class Rocket implements SpaceShip {
     }
 
     @Override
-    public boolean launch() {
+    public boolean launch()
+    {
         return true;
     }
 
