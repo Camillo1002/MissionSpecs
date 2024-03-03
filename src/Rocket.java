@@ -1,4 +1,14 @@
 public class Rocket implements SpaceShip {
+    protected int cost;
+    protected double cargoWeight;
+    protected int maxWeight;
+
+    public Rocket(int cost, double cargoWeight, int maxWeight) {
+        this.cost = cost;
+        this.cargoWeight = cargoWeight;
+        this.maxWeight = maxWeight;
+    }
+
     @Override
     public boolean launch() {
         return true;
@@ -10,12 +20,12 @@ public class Rocket implements SpaceShip {
     }
 
     public boolean canCarry(Item item) {
-        return true;
+        return (cargoWeight + item.weight) <= maxWeight;
     }
 
-
     public int carry(Item item) {
-        return 0;
+        cargoWeight = cargoWeight + item.weight;
+        return (int) cargoWeight;
     }
 
 }
