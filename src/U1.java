@@ -15,4 +15,9 @@ public class U1 extends Rocket {
         return Math.random() >  crash;
     }
 
+    @Override
+    public int getCost() {
+        return 60;
+    }
+
 }

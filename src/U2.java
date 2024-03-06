@@ -13,4 +13,9 @@ public class U2 extends Rocket {
         double crash = 0.08* cargoWeight/maxWeight;
         return Math.random() >  crash;
     }
+
+    @Override
+    public int getCost() {
+        return 120;
+    }
 }
